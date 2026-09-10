@@ -15,11 +15,23 @@ class DashboardPage extends StatelessWidget {
             children: [
               Text('Your sari business, at a glance.', style: theme.textTheme.titleLarge),
               const SizedBox(height: 20),
-              const _MetricCard(label: 'Items in stock', value: '0', icon: Icons.inventory_2_outlined),
+              const _MetricCard(
+                label: 'Items in stock',
+                value: '0',
+                icon: Icons.inventory_2_outlined,
+              ),
               const SizedBox(height: 12),
-              const _MetricCard(label: 'Sales this month', value: '₹0', icon: Icons.trending_up),
+              const _MetricCard(
+                label: 'Sales this month',
+                value: '₹0',
+                icon: Icons.trending_up,
+              ),
               const SizedBox(height: 12),
-              const _MetricCard(label: 'Partner balance', value: '₹0', icon: Icons.account_balance_wallet_outlined),
+              const _MetricCard(
+                label: 'Partner balance',
+                value: '₹0',
+                icon: Icons.account_balance_wallet_outlined,
+              ),
             ],
           ),
         ),
@@ -40,12 +52,14 @@ class _MetricCard extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: Row(children: [
-          Icon(icon, color: scheme.primary),
-          const SizedBox(width: 16),
-          Expanded(child: Text(label)),
-          Text(value, style: Theme.of(context).textTheme.headlineSmall),
-        ]),
+        child: Row(
+          children: [
+            Icon(icon, color: scheme.primary),
+            const SizedBox(width: 16),
+            Expanded(child: Text(label)),
+            Text(value, style: Theme.of(context).textTheme.headlineSmall),
+          ],
+        ),
       ),
     );
   }
