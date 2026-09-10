@@ -13,7 +13,10 @@ class DashboardPage extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           sliver: SliverList.list(
             children: [
-              Text('Your sari business, at a glance.', style: theme.textTheme.titleLarge),
+              Text(
+                'Your sari business, at a glance.',
+                style: theme.textTheme.titleLarge,
+              ),
               const SizedBox(height: 20),
               const _MetricCard(
                 label: 'Items in stock',
@@ -41,7 +44,11 @@ class DashboardPage extends StatelessWidget {
 }
 
 class _MetricCard extends StatelessWidget {
-  const _MetricCard({required this.label, required this.value, required this.icon});
+  const _MetricCard({
+    required this.label,
+    required this.value,
+    required this.icon,
+  });
   final String label;
   final String value;
   final IconData icon;

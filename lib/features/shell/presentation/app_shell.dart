@@ -42,7 +42,9 @@ class AppShell extends ConsumerWidget {
       _ComingSoonPage(title: 'Partners'),
     ];
     return Scaffold(
-      body: SafeArea(child: IndexedStack(index: selectedIndex, children: pages)),
+      body: SafeArea(
+        child: IndexedStack(index: selectedIndex, children: pages),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedIndex,
         destinations: _destinations,
@@ -58,5 +60,7 @@ class _ComingSoonPage extends StatelessWidget {
   final String title;
 
   @override
-  Widget build(BuildContext context) => Center(child: Text('$title is coming soon'));
+  Widget build(BuildContext context) {
+    return Center(child: Text('$title is coming soon'));
+  }
 }
